@@ -14,6 +14,13 @@ namespace ConsoleApplication9
             public string Author;
             public int Page;
 
+            public Book(string Name, string Author, int Page)
+            {
+                this.Name = Name;
+                this.Author = Author;
+                this.Page = Page;
+            }
+
             public override string ToString()
             {
                 return String.Format($"{Name} - {Author} - {Page}");
@@ -21,8 +28,8 @@ namespace ConsoleApplication9
         }
 
         static void Main(string[] args)
-        {
-            Book book1;
+        {  
+            Book book1 = new Book("CLR via C#", "Jeffrey Richter", 857);
             book1.Name = "CLR via C#";
             book1.Author = "Jeffrey Richter";
             book1.Page = 858;
@@ -31,9 +38,9 @@ namespace ConsoleApplication9
 
             List<Book> books = new List<Book>
             {
-                new Book { Name = "CLR via C#", Author = "Jeffrey Richter", Page = 857},
+                new Book ("CLR via C#", "Jeffrey Richter", 857),
                 new Book { Name = "C# 6.0 and the .NET 4.6 Framework", Author = "Andrew Troelsen", Page = 1400},
-                new Book {Name = "Pro ASP.NET Core MVC", Author  = "Adam Freeman", Page = 1250}
+                new Book { Name = "Pro ASP.NET Core MVC", Author  = "Adam Freeman", Page = 1250}
             };
 
             Console.WriteLine($"{books[0]}");
