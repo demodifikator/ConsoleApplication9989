@@ -23,10 +23,10 @@ namespace ConsoleApplication2
                 this.Page = Page;
             }
 
-            public override string ToString()
-            {
-                return String.Format($"{ID} - {Author} - {Title} - {Page}");
-            }
+            //public override string ToString()
+            //{
+            //    return String.Format($"{ID} - {Author} - {Title} - {Page}");
+            //}
         }
         static void Main(string[] args)
         {
